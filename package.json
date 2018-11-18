@@ -14,7 +14,8 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "xo && ava"
+    "lint": "xo && ava",
+    "cli": "node ./cli.js"
   },
   "keywords": [
     "cli",
@@ -25,20 +26,23 @@
     "live-reload"
   ],
   "dependencies": {
-    "chalk": "^1.1.3",
-    "chokidar": "^1.6.1",
-    "meow": "^3.7.0",
+    "better-try-catch": "^0.6.2",
+    "chalk": "^2.4.1",
+    "chokidar": "^2.0.4",
+    "config": "^2.0.1",
+    "meow": "^5.0.0",
     "rsync": "^0.6.1",
     "ssh-url": "^0.1.5",
-    "ssh2": "^0.5.4",
-    "update-notifier": "^2.0.0"
+    "ssh2": "^0.6.1",
+    "try-catch": "^2.0.0",
+    "update-notifier": "^2.5.0"
   },
   "devDependencies": {
-    "ava": "^0.18.1",
-    "coveralls": "^2.11.12",
-    "nyc": "^10.0.0",
-    "testdouble": "^1.11.1",
-    "xo": "^0.17.0"
+    "ava": "^0.25.0",
+    "coveralls": "^3.0.2",
+    "nyc": "^13.1.0",
+    "testdouble": "^3.8.2",
+    "xo": "^0.23.0"
   },
   "nyc": {
     "reporter": [
@@ -51,5 +55,8 @@
       "scopes": [],
       "quick": true
     }
+  },
+  "xo": {
+    "semicolon": false
   }
 }
